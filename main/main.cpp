@@ -30,12 +30,9 @@ int main(int argc, char ** argv)
 	*(void **) (&composant2) = dlsym(comp2, "composant2");
     *(void **) (&getComposant1Version) = dlsym(comp1, "getComposant1Version");
 
-	// valeur1=(*composant1)(data1,data2);
-	// valeur2=composant2(data1,data2);
+	valeur1=(*composant1)(data1,data2);
+	valeur2=composant2(data1,data2);
 
-	std::cout << composant1 << std::endl;
-	std::cout << composant2 << std::endl;
-	std::cout << getComposant1Version << std::endl;
-	// std::cout << (*getComposant1Version)() << std::endl;
-	// std::cout << "valeur 1 :" << valeur1 << " valeur 2 :" << valeur2 << std::endl;
+	std::cout << (*getComposant1Version)() << std::endl;
+	std::cout << "valeur 1 :" << valeur1 << " valeur 2 :" << valeur2 << std::endl;
 }
