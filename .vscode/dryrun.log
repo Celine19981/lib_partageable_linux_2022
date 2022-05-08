@@ -1,0 +1,13 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/Celine/Desktop/Dev/gitP/lib_partageable_linux_2022'
+cd main && make install
+ 
+make[1]: Entering directory '/mnt/c/Users/Celine/Desktop/Dev/gitP/lib_partageable_linux_2022/main'
+cp main ../bin; \
+cp ../lib/libComposant1.so ../lib/libComposant2.so ../bin
+make[1]: Leaving directory '/mnt/c/Users/Celine/Desktop/Dev/gitP/lib_partageable_linux_2022/main'
+ 
+cd bin; \
+LD_LIBRARY_PATH=. ./main
+make: Leaving directory '/mnt/c/Users/Celine/Desktop/Dev/gitP/lib_partageable_linux_2022'
+ 
